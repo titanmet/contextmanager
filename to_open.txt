@@ -1,0 +1,16 @@
+Basic fields
+Basic fields generally represent scalar data types with single values, and refer to a single input from the form.
+
+class wtforms.fields.BooleanField(default field arguments, false_values=None)
+Represents an <input type="checkbox">. Set the checked-status by using the default-option. Any value for default, e.g. default="checked" puts checked into the html-element and sets the data to True
+
+Parameters:	false_values – If provided, a sequence of strings each of which is an exact match string of what is considered a “false” value. Defaults to the tuple ('false', '')
+class wtforms.fields.DateField(default field arguments, format='%Y-%m-%d')
+Same as DateTimeField, except stores a datetime.date.
+
+class wtforms.fields.DateTimeField(default field arguments, format='%Y-%m-%d %H:%M:%S')
+A text field which stores a datetime.datetime matching a format.
+
+For better date/time fields, see the dateutil extension
+
+class wtforms.fields.DecimalField(default field arguments, places=2, rounding=None, use_locale=False, number_format=None)¶
